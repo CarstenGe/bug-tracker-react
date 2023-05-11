@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import Menu from './components/menu/Menu';
+import Sidebar from './components/sidebar/Sidebar';
+import Projects from './components/content/projects/Projects';
+import Dashboard from './components/content/dashboard/Dashboard';
+import People from './components/content/people/People';
+import Issues from './components/content/issues/Issues';
+import { Routes, Route } from 'react-router-dom';
+import Account from './components/account/Account';
+import Settings from './components/settings/Settings';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Menu />
+      <Sidebar />
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/projects/:id" element={<Issues />} />
+        <Route path="/people" element={<People />} />
+        <Route path="/account" element={<Account />} />
+        <Route path="/settings" element={<Settings />} />
+      </Routes>
     </div>
   );
 }

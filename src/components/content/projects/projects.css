@@ -1,0 +1,6 @@
+.projects-container {
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 50px;
+	padding-right: 50px;
+}

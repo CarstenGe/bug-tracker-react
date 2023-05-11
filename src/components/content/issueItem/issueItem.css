@@ -1,0 +1,71 @@
+.issue-item {
+	align-items: center;
+	display: flex;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: left;
+}
+.issue-item:nth-child(odd) {
+	background-color: #f6f6f6;
+}
+.issue-item .priority .color {
+	border-radius: 50%;
+	height: 15px;
+	margin-left: 25px;
+	width: 15px;
+}
+.issue-item .priority .high {
+	background-color: red;
+}
+.issue-item .priority .medium {
+	background-color: orange;
+}
+.issue-item .priority .low {
+	background-color: green;
+}
+.issue-item .assigned .person {
+	align-items: center;
+	display: flex;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.issue-item .assigned .person svg,
+.issue-item .reporter svg {
+	background-color: #f6f6f6;
+	border: 1px solid #333;
+	border-radius: 50%;
+	fill: #333;
+	height: 18px;
+	margin-right: 5px;
+	width: 18px;
+}
+.issue-item .assigned .person p {
+	margin: 0;
+}
+.issue-item .reporter .person {
+	align-items: center;
+	display: flex;
+}
+.issue-item .actions {
+	display: flex;
+	justify-content: space-around;
+}
+.issue-item .actions button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	height: fit-content;
+}
+.issue-item .actions button svg {
+	background-color: #f6f6f6;
+	border: 1px solid #333;
+	border-radius: 50%;
+	fill: #333;
+	height: 18px;
+	padding: 5px;
+	width: 18px;
+}
+.issue-item .actions button svg:hover {
+	background-color: #333;
+	fill: #f6f6f6;
+}

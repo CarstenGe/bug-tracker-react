@@ -1,0 +1,19 @@
+.menu {
+	align-items: center;
+	border-bottom: 1px solid #eee;
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 25px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.menu a {
+	color: #333;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-decoration: none;
+}
+.menu button {
+	margin-left: 10px;
+	margin-right: 25px;
+}

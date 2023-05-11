@@ -1,0 +1,59 @@
+.sidebar {
+	background-color: #f6f6f6;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+	height: 100vh;
+	left: 0;
+	position: absolute;
+	top: 0;
+	transition: all 0.3s ease;
+	width: fit-content;
+}
+.sidebar.collapsed {
+	left: -125px;
+}
+.sidebar .toggle-sidebar {
+	padding-top: 25px;
+	text-align: right;
+}
+.sidebar .toggle-sidebar button {
+	border:none;
+	background-color: transparent;
+	cursor: pointer;
+}
+.sidebar .toggle-sidebar button svg {
+	fill: #333333;
+}
+.sidebar .sidebar-content {
+	height: auto;
+	padding-left: 25px;
+	padding-right: 50px;
+}
+.sidebar .sidebar-content ul {
+	list-style: none;
+	padding-left: 0;
+	text-align: left;
+}
+.sidebar .sidebar-bottom {
+	padding-bottom: 25px;
+	padding-right: 5px;
+	text-align: right;
+}
+.sidebar .sidebar-bottom a {
+	color: #333333;
+	text-decoration: none;
+}
+.sidebar .sidebar-bottom .account,
+.sidebar .sidebar-bottom .settings {
+	align-items: center;
+	display: flex;
+	justify-content: flex-end;
+}
+.sidebar .sidebar-bottom .icon-text {
+	margin-left: 5px;
+	margin-right: 25px;
+}
+.sidebar.collapsed .sidebar-bottom .icon-text {
+	display: none;
+}

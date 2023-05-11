@@ -1,0 +1,28 @@
+.issues .filters {
+	margin-bottom: 25px;
+}
+.issues .issues-heading {
+	border-bottom: 1px solid #eee;
+	display: flex;
+	font-weight: bold;
+	margin-bottom: 25px;
+	padding-bottom: 15px;
+	text-align: left;
+}
+.issues .priority {
+	margin-left: 50px;
+	width: 100px;
+}
+.issues .desc {
+	flex: 1;
+}
+.issues .assigned {
+	overflow-x: scroll;
+	width: 125px;
+}
+.issues .reporter {
+	width: 125px;
+}
+.issues .actions {
+	width: 125px;
+}
