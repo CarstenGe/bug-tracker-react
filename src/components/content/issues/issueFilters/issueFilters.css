@@ -28,6 +28,7 @@
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
 	padding: 3px 2px;
+	height: 30px;
 }
 .issue-filters select {
 	background-color: #f6f6f6;

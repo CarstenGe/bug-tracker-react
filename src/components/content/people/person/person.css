@@ -1,0 +1,27 @@
+.people .person {
+	border: 1px solid #e5e5e5;
+	margin-bottom: 15px;
+	padding: 15px;
+	text-align: left;
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+.people .person svg {
+	color: #333;
+	cursor: pointer;
+}
+.people .person .confirmation {
+	display: flex;
+}
+.people .person .confirmation .yes {
+	color: red;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.people .person .confirmation .yes:hover,
+.people .person .confirmation .no:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
