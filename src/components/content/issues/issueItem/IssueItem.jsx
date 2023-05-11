@@ -12,12 +12,14 @@ function IssueItem({issue}) {
 			
 			<div className='desc'>{issue.desc}</div>
 			
-			<div className='assigned'>{issue.assigned.map((assigned)=>(
-				<div className='person'>
-					<PersonIcon />
-					<p>{assigned}</p>
-				</div>
-			))}</div>
+			<div className='assigned'>
+				{issue.assigned.map((assigned, index)=>(
+					<div key={index} className='person'>
+						<PersonIcon />
+						<p>{assigned}</p>
+					</div>
+				))}
+			</div>
 			
 			<div className='reporter'>
 				<div className='person'>

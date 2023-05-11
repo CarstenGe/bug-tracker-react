@@ -4,16 +4,16 @@ const issues = [
 		project: 1,
 		priority: 'high',
 		desc: 'The logo is too big',
-		assigned: ['Jeff', 'Jake'],
-		reporter: 'Jim',
+		assigned: ['Jim', 'Stanley'],
+		reporter: 'Toby',
 	},
 	{
 		id: 2,
 		project: 1,
 		priority: 'low',
 		desc: 'Pageload is very slow',
-		assigned: ['Jeff','Jeffrey'],
-		reporter: 'Michael'
+		assigned: ['Jim','Michael'],
+		reporter: 'Toby'
 	},
 ];
 export default issues;

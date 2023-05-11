@@ -1,0 +1,94 @@
+.create-project {
+	background-color: rgba(0,0,0,0.5);
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100vw;
+}
+.create-project .create-project-box {
+	background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	padding: 50px;
+	position: relative;
+	width: 400px;
+}
+.create-project .create-project-box .error-message {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+	border-radius: 5px;
+	color: #721c24;
+	margin-bottom: 25px;
+	padding: 5px 10px;
+}
+.create-project .create-project-box .success-message {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+	border-radius: 5px;
+	color: #155724;
+	padding: 5px 10px;
+}
+.create-project .create-project-box .close {
+	cursor: pointer;
+	position: absolute;
+	right: 10px;
+	top: 10px
+}
+.create-project .create-project-box .close svg {
+	width: 17px;
+}
+.create-project .create-project-box h2 {
+	margin-top: 0;
+	margin-bottom: 25px;
+}
+.create-project .create-project-box p {
+	margin-top: 0;
+	margin-bottom: 15px;
+}
+.create-project .create-project-box input:not([type=checkbox]),
+.create-project .create-project-box select {
+	border: 1px solid #e5e5e5;
+	border-radius: 5px;
+	height: 30px;
+	margin-bottom: 25px;
+	padding: 0 15px;
+	width: 100%;
+}
+.create-project .create-project-box textarea {
+	border: 1px solid #e5e5e5;
+	border-radius: 5px;
+	height: 150px;
+	margin-bottom: 25px;
+	padding: 15px;
+	width: 100%;
+}
+.create-project .create-project-box textarea:focus,
+.create-project .create-project-box select:focus,
+.create-project .create-project-box input:focus {
+	outline: none;
+}
+.create-project .create-project-box .people-container {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-bottom: 15px;
+	width: 300px;
+}
+.create-project .create-project-box .people-container input[type=checkbox]{
+	margin-right: 5px;
+	margin-bottom: 10px;
+}
+.create-project .create-project-box .people-container .person {
+	cursor: pointer;
+	margin-right: 15px;
+}
+.create-project .create-project-box .btn {
+	margin: 0;
+}

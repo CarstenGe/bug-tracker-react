@@ -1,0 +1,42 @@
+.issue-filters {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+.issue-filters .search {
+	align-items: center;
+	display: flex;
+}
+.issue-filters .search input {
+	border: 1px solid #e5e5e5;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-right: none;
+	height: 30px;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.issue-filters .search input:focus {
+	outline: none;
+}
+.issue-filters .search svg {
+	background-color: #f6f6f6;
+	border: 1px solid #e5e5e5;
+	border-left: none;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding: 3px 2px;
+}
+.issue-filters select {
+	background-color: #f6f6f6;
+	border: 1px solid #e5e5e5;
+	border-radius: 5px;
+	height: 30px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.issue-filters select:focus {
+	outline: none;
+}

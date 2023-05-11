@@ -1,3 +1,9 @@
+.issues .issue-header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 50px;
+	padding-left: 50px;
+}
 .issues .filters {
 	margin-bottom: 25px;
 }
