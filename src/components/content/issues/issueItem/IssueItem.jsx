@@ -2,8 +2,12 @@ import './issueItem.css';
 import PersonIcon from '@mui/icons-material/Person';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
+import { useState } from 'react';
 
-function IssueItem({issue}) {
+function IssueItem({issue, deleteIssue}) {
+
+	const [showDeleteConfirmation, setShowDeleteConfirmation]= useState(false);
+
 	return (
 		<div className='issue-item'>
 			<div className='priority'>
@@ -29,8 +33,12 @@ function IssueItem({issue}) {
 			</div>
 			
 			<div className='actions'>
-				<button><EditIcon /></button>
-				<button><DeleteIcon /></button>
+				{showDeleteConfirmation ? 
+					<p className='confirmation'>Are you sure? 
+						<div className='yes' onClick={deleteIssue}>Yes</div>
+						<div className='no' onClick={()=>setShowDeleteConfirmation(false)}> No</div></p>
+					: <><button><EditIcon /></button><button onClick={()=>setShowDeleteConfirmation(true)}><DeleteIcon /></button></>
+				}
 			</div>
 		</div>
 	);

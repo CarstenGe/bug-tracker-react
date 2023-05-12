@@ -49,6 +49,9 @@ function Issues() {
 	const handleIssueReporter = (e) => {
 		setReporter(e.target.value);
 	}
+	const handleDeleteIssue = (id) => {
+		setProjectIssues(projectIssues.filter((issue)=>issue.id !== id));
+	}
 
 	return (
 		<div className='issues'>
@@ -74,7 +77,7 @@ function Issues() {
 					<div className='actions'>Actions</div>
 				</div>
 				{(projectIssues.length) ? projectIssues.map((issue)=>(
-					<IssueItem key={issue.id} issue={issue} />
+					<IssueItem key={issue.id} issue={issue} deleteIssue={()=>handleDeleteIssue(issue.id)} />
 				)) : 
 				<p>No issues found</p>}
 			</div>

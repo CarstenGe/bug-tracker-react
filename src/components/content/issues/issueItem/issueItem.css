@@ -61,11 +61,25 @@
 	border: 1px solid #333;
 	border-radius: 50%;
 	fill: #333;
-	height: 18px;
+	height: 28px;
 	padding: 5px;
-	width: 18px;
+	width: 28px;
 }
 .issue-item .actions button svg:hover {
 	background-color: #333;
 	fill: #f6f6f6;
+}
+.issue-item .actions .confirmation {
+	display: flex;
+    flex-wrap: wrap;
+}
+.issue-item .actions .confirmation div {
+	cursor: pointer;
+}
+.issue-item .actions .confirmation .yes {
+	color: red;
+    margin-right: 5px;
+}
+.issue-item .actions .confirmation div:hover {
+	text-decoration: underline;
 }
