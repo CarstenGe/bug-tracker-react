@@ -1,0 +1,61 @@
+.dashboard-item {
+	border: 1px solid #333;
+	border-radius: 5px;
+	flex: 1;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+.dashboard-item .head {
+	background-color: #f6f6f6;
+	border-bottom: #e5e5e5;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	display: flex;
+	justify-content: space-between;
+	padding: 15px;
+}
+.dashboard-item .head h2 {
+	color: #333;
+	margin: 0;
+}
+.dashboard-item .head svg {
+	cursor: pointer;
+}
+.dashboard-item .body {
+	display: flex;
+	overflow-y: scroll;
+	padding: 15px;
+}
+.dashboard-item .body a {
+	color: #333;
+	cursor: pointer;
+	text-decoration: none;
+}
+.dashboard-item .body p {
+	background-color: #f6f6f6;
+	border: 1px solid #e5e5e5;
+	border-radius: 5px;
+	color: #333;
+	margin: 5px;
+	padding: 7px;
+}
+.dashboard-item .body p:hover:has(a) {
+	background-color: #e5e5e5;	
+}
+.dashboard-item .footer {
+	background-color: #f6f6f6;
+	border-bottom: #e5e5e5;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	color: #999;
+	display: flex;
+	justify-content: space-between;
+	padding: 15px;
+}
+.dashboard-item .footer a {
+	color: #999;
+	text-decoration: none;
+}
+.dashboard-item .footer a:hover {
+	color: #333;
+}
