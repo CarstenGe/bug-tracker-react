@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import './menu.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Create from '../create/Create';
 
 
 function Menu(props) {
+
+	const location = useLocation();
+
 	const [hideSubmenu,setHideSubmenu] = useState(true);
 	const [hideCreateComponent,setHideCreateComponent] = useState(true);
 	const [creationType,setCreationType] = useState();
@@ -21,9 +24,10 @@ function Menu(props) {
 	return (
 		<div className='menu'>
 			
-			<Link to="/">Dashboard</Link>
-			<Link to="/projects">Projects</Link>
-			<Link to="/people">People</Link>
+			<Link to="/" className={location.pathname === '/' ? 'active' : ''}>Dashboard</Link>
+     		<Link to="/projects" className={location.pathname.includes('/projects') ? 'active' : ''}>Projects</Link>
+      		<Link to="/people" className={location.pathname === '/people' ? 'active' : ''}>People</Link>
+     
 			<button className='btn btn-black-full' onClick={toggleSubmenu}>Create</button>
 
 			<div className={`create-submenu ${hideSubmenu ? 'hidden' : ''}`}>

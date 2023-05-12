@@ -14,6 +14,9 @@
 	margin-right: 10px;
 	text-decoration: none;
 }
+.menu a.active {
+	color: #35C1BE;
+}
 .menu button {
 	margin-left: 10px;
 	margin-right: 25px;

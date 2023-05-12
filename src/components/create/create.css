@@ -34,6 +34,10 @@
 	color: #155724;
 	padding: 5px 10px;
 }
+.create-project .create-project-box small {
+	color: #999;
+	margin-top: 10px;
+}
 .create-project .create-project-box .close {
 	cursor: pointer;
 	position: absolute;
