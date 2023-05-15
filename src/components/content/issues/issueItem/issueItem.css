@@ -50,7 +50,7 @@
 	display: flex;
 	justify-content: space-around;
 }
-.issue-item .actions button {
+.issue-item .actions button:not(.btn) {
 	background-color: transparent;
 	border: none;
 	cursor: pointer;

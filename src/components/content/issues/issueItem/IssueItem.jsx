@@ -3,10 +3,29 @@ import PersonIcon from '@mui/icons-material/Person';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { useState } from 'react';
+import EditIssue from '../editIssue/EditIssue';
 
 function IssueItem({issue, deleteIssue}) {
 
+	const [showEditIssue, setShowEditIssue]= useState(false);
+	const [showEditIssueButton, setShowEditIssueButton]= useState(true);
 	const [showDeleteConfirmation, setShowDeleteConfirmation]= useState(false);
+
+	const handleEditIssueClick = () => {
+		setShowEditIssue(true);
+	}
+	const handleDeleteConfirmationClick = () => {
+		setShowEditIssueButton(false);
+		setShowDeleteConfirmation(true);
+	}
+	const handleDeleteIssueYes = () => {
+		setShowEditIssueButton(true);
+		deleteIssue();
+	}
+	const handleDeleteIssueNo = () => {
+		setShowEditIssueButton(true);
+		setShowDeleteConfirmation(false);
+	}
 
 	return (
 		<div className='issue-item'>
@@ -33,11 +52,17 @@ function IssueItem({issue, deleteIssue}) {
 			</div>
 			
 			<div className='actions'>
+				{showEditIssueButton ? 
+					<button onClick={handleEditIssueClick}><EditIcon /></button>
+					:
+					null
+				}
+				{showEditIssue ? <EditIssue setShowEditIssue={setShowEditIssue} issue={issue} /> : null}
 				{showDeleteConfirmation ? 
 					<p className='confirmation'>Are you sure? 
-						<div className='yes' onClick={deleteIssue}>Yes</div>
-						<div className='no' onClick={()=>setShowDeleteConfirmation(false)}> No</div></p>
-					: <><button><EditIcon /></button><button onClick={()=>setShowDeleteConfirmation(true)}><DeleteIcon /></button></>
+						<div className='yes' onClick={handleDeleteIssueYes}>Yes</div>
+						<div className='no' onClick={handleDeleteIssueNo}> No</div></p>
+					: <button onClick={handleDeleteConfirmationClick}><DeleteIcon /></button>
 				}
 			</div>
 		</div>
