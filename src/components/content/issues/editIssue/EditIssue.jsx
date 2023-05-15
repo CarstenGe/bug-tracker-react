@@ -29,7 +29,7 @@ function EditIssue({setShowEditIssue, issue}) {
 	}
 	const handleCheckboxChange = (name) => {
 		if(issueAssigned.includes(name)){
-			setIssueAssigned(issueAssigned.filter((issue)=>issue !== name));
+			setIssueAssigned(issueAssigned.filter((assignedName)=>assignedName !== name));
 		}
 		else {
 			setIssueAssigned([...issueAssigned,name])
@@ -59,7 +59,7 @@ function EditIssue({setShowEditIssue, issue}) {
 							<textarea placeholder='Description' className='description' value={issueDesc} onChange={(e)=>setIssueDesc(e.target.value)}></textarea>
 							
 							<select value={issueProject} onChange={(e)=>setIssueProject(e.target.value)}>
-								<option className='project'>Select a project</option>
+								<option className='project' value=''>Select a project</option>
 								{projects.map((project) => (
 									<option key={project.id} className='project' value={project.id}>{project.name}</option>
 								))}
