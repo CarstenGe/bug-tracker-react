@@ -71,8 +71,8 @@ function EditIssue({setShowEditIssue, issue}) {
 									<label key={person.id} className='person'>
 										<input 
 											type="checkbox" 
-											checked={issueAssigned.includes(person.name)}
-											onChange={()=>handleCheckboxChange(person.name)}
+											checked={issueAssigned.includes(person.firstname)}
+											onChange={()=>handleCheckboxChange(person.firstname)}
 										/>{person.name}
 									</label>
 								))}

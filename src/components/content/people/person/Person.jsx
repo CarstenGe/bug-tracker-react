@@ -14,7 +14,7 @@ function Person({person,deletePerson}) {
 	}
 	return (
 		<div className='person'>
-			{person.name}
+			{person.firstname}
 			{!showConfirmation ?
 				<DeleteIcon onClick={()=>setShowConfirmation(true)} />
 				:

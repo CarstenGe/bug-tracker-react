@@ -79,7 +79,7 @@ function Create({creationType, setHideCreateComponent}) {
 								<p><strong>Assign this issue to:</strong></p>
 								<div className="people-container">
 									{people.map((person) => (
-										<label key={person.id} className='person'><input type="checkbox" />{person.name}</label>
+										<label key={person.id} className='person'><input type="checkbox" />{person.firstname}</label>
 									))}
 								</div>
 								

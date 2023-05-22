@@ -35,6 +35,12 @@
 	padding-left: 0;
 	text-align: left;
 }
+.sidebar .sidebar-content ul li {
+	cursor: pointer;
+}
+.sidebar .sidebar-content ul li:hover {
+	text-decoration: underline;
+}
 .sidebar .sidebar-bottom {
 	padding-bottom: 25px;
 	padding-right: 5px;

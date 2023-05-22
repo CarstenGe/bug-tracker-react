@@ -1,0 +1,39 @@
+.account-container {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.account-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 400px;
+}
+.account-form .form-item {
+	margin-bottom: 25px;
+	text-align: left;
+	width: calc(50% - 25px);
+}
+.account-form .form-item label {
+	font-weight: bold;
+}
+.account-form .form-item input:focus {
+	outline: none;
+}
+.account-form .form-item input:not([type=submit]) {
+	border: 1px solid #333;
+	border-radius: 5px;
+	margin-top: 5px;
+	padding: 10px 15px;
+}
+.account .success-message {
+	background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+	border-radius: 5px;
+	color: #155724;
+	margin-top: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px 10px;
+	width: fit-content;
+}

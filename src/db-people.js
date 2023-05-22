@@ -1,33 +1,40 @@
 const people = [
 	{
 		id: 1,
-		name: 'Jim',
-		profilePic: '',
+		firstname: 'Jim',
+		lastname: 'Halpert',
+		email: 'jim@the-office.com',
+		phone: '044-123-88-45'
 	},
 	{
 		id: 2,
-		name: 'Michael',
-		profilePic: '',
+		firstname: 'Michael',
+		lastname: 'Scott',
+		phone: '044-123-88-45'
 	},
 	{
 		id: 3,
-		name: 'Dwight',
-		profilePic: '',
+		firstname: 'Dwight',
+		lastname: 'Schrute',
+		phone: '044-123-88-45'
 	},
 	{
 		id: 4,
-		name: 'Stanley',
-		profilePic: '',
+		firstname: 'Stanley',
+		lastname: 'Black',
+		phone: '044-123-88-45'
 	},
 	{
 		id: 5,
-		name: 'Phillis',
-		profilePic: '',
+		firstname: 'Phillis',
+		lastname: 'Vance',
+		phone: '044-123-88-45'
 	},
 	{
 		id: 6,
-		name: 'Toby',
-		profilePic: '',
+		firstname: 'Toby',
+		lastname: 'No One Cares',
+		phone: '044-123-88-45'
 	},
 ];
 export default people;

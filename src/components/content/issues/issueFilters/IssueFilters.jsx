@@ -21,7 +21,7 @@ function IssueFilters({issueSearch,issuePriority,issueAssigned,issueReporter}) {
 				<select onChange={issueAssigned}>
 					<option value="">Assigned</option>
 					{people.map((person, index)=>(
-						<option key={index} value={person.name}>{person.name}</option>
+						<option key={index} value={person.name}>{person.firstname}</option>
 					))}
 				</select>
 			</div>
@@ -29,7 +29,7 @@ function IssueFilters({issueSearch,issuePriority,issueAssigned,issueReporter}) {
 				<select onChange={issueReporter}>
 					<option value="">Reporter</option>
 					{people.map((person, index)=>(
-						<option key={index} value={person.name}>{person.name}</option>
+						<option key={index} value={person.name}>{person.firstname}</option>
 					))}
 				</select>
 			</div>

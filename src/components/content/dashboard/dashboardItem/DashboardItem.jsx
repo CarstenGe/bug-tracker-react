@@ -35,7 +35,7 @@ function DashboardItem({title, content, hasLink}) {
 			<div className="body">
 				{content.map((cont)=>(
 					<p key={cont.id}>
-						{hasLink ? <Link to={`/${title.toLowerCase()}/${cont.id}`}>{cont.name}</Link> : cont.name}
+						{hasLink ? <Link to={`/${title.toLowerCase()}/${cont.id}`}>{cont.name}</Link> : cont.firstname}
 					</p>
 				))}
 			</div>
