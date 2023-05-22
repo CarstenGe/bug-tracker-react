@@ -1,18 +1,43 @@
 import './account.css';
-import people from '../../db-people';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-function Account(props) {
+function Account({person}) {
 
-	const [firstName, setFirstName] = useState(people[0].firstname);
-	const [name, setName] = useState(people[0].lastname);
-	const [email, setEmail] = useState(people[0].email);
-	const [phone, setPhone] = useState(people[0].phone);
+	const [firstName, setFirstName] = useState(person.firstname);
+	const [name, setName] = useState(person.lastname);
+	const [email, setEmail] = useState(person.email);
+	const [phone, setPhone] = useState(person.phone);
+	const [password, setPassword] = useState('');
+	const [confirmPassword, setConfirmPassword] = useState('');
+	const [confirmPasswordClass, setConfirmPasswordClass] = useState('');
+	const [error, setError] = useState('');
+	const [showError, setShowError] = useState(false);
 	const [showConfirmation, setShowConfirmation] = useState(false);
+
+	useEffect(() => {
+		if(password === ''){
+			setConfirmPasswordClass('');
+			setError(false);
+		}
+		else if (password === confirmPassword) {
+			setConfirmPasswordClass('identical');
+			setError(false);
+		} else {
+			setConfirmPasswordClass('not-identical');
+			setError('Passwords don\'t match');			
+		}
+	},[password, confirmPassword]);
 
 	const handleFormSubmit = (e) => {
 		e.preventDefault();
-		setShowConfirmation(true);
+
+		if(error){
+			setShowError(true);
+		}
+		else {
+			setShowError(false);
+			setShowConfirmation(true);
+		}
 
 		setTimeout(() => {
 			setShowConfirmation(false);
@@ -49,6 +74,32 @@ function Account(props) {
 						</label>
 					</div>
 					<div className='form-item'>
+						<label htmlFor='password'>
+							New Password<br />
+							<input
+							type='password'
+							id='password'
+							className={confirmPasswordClass}
+							placeholder='password'
+							value={password}
+							onChange={(e) => setPassword(e.target.value)}
+							/>
+						</label>
+					</div>
+					<div className='form-item'>
+						<label htmlFor='confirmPassword'>
+							Confirm Password<br />
+							<input
+							type='password'
+							id='confirmPassword'
+							className={confirmPasswordClass}
+							placeholder='confirm password'
+							value={confirmPassword}
+							onChange={(e) => setConfirmPassword(e.target.value)}
+							/>
+						</label>
+					</div>
+					<div className='form-item'>
 						<label htmlFor='email'>
 							Email<br />
 							<input
@@ -75,6 +126,7 @@ function Account(props) {
 					<button type='submit' className='btn btn-black-full'>Update</button>
 				</form>
 			</div>
+			{showError && <div className='error-message'>Passwords don't match</div>}
 			{showConfirmation && <div className='success-message'>Account settings successfully updated</div>}
 		</div>
 	);

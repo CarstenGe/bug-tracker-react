@@ -8,8 +8,12 @@ import Issues from './components/content/issues/Issues';
 import { Routes, Route } from 'react-router-dom';
 import Account from './components/account/Account';
 import Settings from './components/settings/Settings';
+import people from './db-people';
 
 function App() {
+
+  const currentUser = people[0]; // todo: fetch from somewhere
+
   return (
     <div className="App">
       <Menu />
@@ -19,7 +23,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/:id" element={<Issues />} />
         <Route path="/people" element={<People />} />
-        <Route path="/account" element={<Account />} />
+        <Route path="/account" element={<Account person={currentUser} />} />
         <Route path="/settings" element={<Settings />} />
       </Routes>
     </div>
